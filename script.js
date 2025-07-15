@@ -47,8 +47,8 @@ function generateVCF(fileName, rawText) {
     counter++;
     const nomorFormat = String(counter).padStart(3, '0');
     const label = pakaiNamaFile && fileName
-      ? `${namaGlobal} ${tipeFile} ${fileName} ${nomorFormat}`
-      : `${namaGlobal} ${tipeFile} ${nomorFormat}`;
+      ? `${namaGlobal} ${fileName} ${nomorFormat}`
+      : `${namaGlobal} ${nomorFormat}`;
     contacts.push({ name: label, phone: num });
   });
 
@@ -59,8 +59,8 @@ function generateVCF(fileName, rawText) {
       counter++;
       const nomorFormat = String(counter).padStart(3, '0');
       const label = pakaiNamaFile && fileName
-        ? `${namaGlobal} ${tipeFile} ${fileName} ${nomorFormat}`
-        : `${namaGlobal} ${tipeFile} ${nomorFormat}`;
+        ? `${namaGlobal} ${fileName} ${nomorFormat}`
+        : `${namaGlobal} ${nomorFormat}`;
       contacts.push({ name: label, phone: nomorFix });
     }
   });
