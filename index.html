@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generator Kontak VCF</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Generator Kontak VCF</h1>
+
+    <div class="top-fields">
+      <input type="text" id="namaGlobal" placeholder="Nama Kontak (misal: OKE)" />
+      <select id="tipeFile">
+        <option value="ADMIN">Admin</option>
+        <option value="NAVY">Navy</option>
+      </select>
+      <select id="urutan">
+        <option value="atas">Dari Atas</option>
+        <option value="bawah">Dari Bawah</option>
+      </select>
+      <input type="number" id="jumlahAwal" min="1" max="20" value="1" placeholder="Jumlah Awal" />
+      <textarea id="extraNomor" placeholder="Nomor Tambahan (opsional)"></textarea>
+      <label><input type="checkbox" id="pakaiNamaFile" checked /> Masukkan Nama File ke Nama Kontak</label>
+    </div>
+
+    <div class="autofill-fields">
+      <input type="text" id="rangeNomor" placeholder="Contoh: 123-152" />
+      <input type="number" id="perBagian" placeholder="Dibagi per berapa" />
+      <button onclick="isiOtomatis()">Isi Otomatis Nama File</button>
+      <button onclick="hapusOtomatis()">Hapus Semua</button>
+    </div>
+
+    <div class="file-columns" id="fileColumns"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
